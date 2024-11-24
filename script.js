@@ -1,3 +1,5 @@
+console.log("Hello World");
+    
 if (/Mobi|Android/i.test(navigator.userAgent)) {
     alert("This website is best viewed in desktop mode. Please enable desktop site mode in your browser.");
   }
