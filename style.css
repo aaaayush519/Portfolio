@@ -97,7 +97,8 @@ section{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    text-align: right;
+    text-align: left;
+    margin-top: 4%;
 }
 .home-content h1{
     font-size: 7rem;
@@ -110,9 +111,8 @@ section{
     font-size: 4rem;
 }
 .home-content p{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 500;
-    line-height: 1.8;
 }
 .home-img img{
     width: 32vw;
@@ -180,6 +180,7 @@ section{
     justify-content: center;
     align-items: center;
     gap: 15rem;
+    background-color: var(--second-bg-color);
 }
 .about-img img{
     width: 32vw;
@@ -194,10 +195,11 @@ section{
 }
 .about-content h2{
     font-size: 7rem;
-    text-align: left;
+    text-align: center;
 }
 .about-content p{
     font-size: 1.8rem;
+    text-align: right;
 }
 
 .about-content .btn{
@@ -259,7 +261,7 @@ section{
     padding: 5rem;
 }
 .service-info h4{
-    font-size: 4rem;
+    font-size: 3rem;
     margin: 2rem 0;
     font-weight: 800;
 }
@@ -305,10 +307,9 @@ section{
                 0 0 50px var(--main-color);
     transform: scale(1.02);
 }
-.project-card img{
-    max-width: 250px;
-    border-radius: 2em;
-    object-fit: cover;
+.project-card i{
+        font-size: 8rem;
+        color: #ea580c;
 }
 .project-card h3{
     font-size: 3rem;
@@ -378,6 +379,17 @@ section{
     font-size: 16px;
 }
 @media(max-width:1285px) {
+    html{
+        font-size: 90%;
+        overflow-x:hidden;
+    }
+    .logo {
+        font-size: 5rem;
+        color: var(--text-color);
+        font-weight: 800;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
     #menu-icon{
         display: block;
     }
@@ -415,32 +427,53 @@ section{
     }
     .home-content{
         align-items: center;
-        text-align: center;
+        text-align: justify;
     }
     .home-img img{
-        width: 56vw;
+        width: 80vw;
     }
     .about{
-        flex-direction: column-reverse;
-        text-align: center;
+        flex-direction: column;
+        text-align: justify;
     }
     .about h2{
         text-align: center;
         margin: 2rem 0;
     }
     .about img{
-        width: 52vw;
+        width: 80vw;
+    }
+    .about-content p{
+        font-size: 1.8rem;
+        text-align: justify;
     }
     .service-container{
-        flex-direction: column-reverse;
+        flex-direction: column;
         text-align: center;
     }
     .projects-box{
-        flex-direction: column-reverse;
+        flex-direction: column;
         text-align: center;
     }
     .project-card img{
         max-width: 200px;
+    }
+    .project-card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: var(--bg-color);
+        border: 2px solid var(--main-color);
+        border-radius: 3rem;
+        gap: 1rem;
+        height: 500px;
+        padding: 5rem 2rem;
+        overflow: hidden;
+        cursor: pointer;
+        box-shadow: 0 0 5px var(--main-color);
+        transition: 0.3s ease;
     }
     .contact form{
         flex-direction: column;
