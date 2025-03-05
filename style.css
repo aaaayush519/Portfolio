@@ -193,10 +193,7 @@ section{
                 0 0 50px var(--main-color),
                 0 0 100px var(--main-color);
 }
-.about-content h2{
-    font-size: 7rem;
-    text-align: center;
-}
+
 .about-content p{
     font-size: 1.8rem;
     text-align: right;
@@ -228,8 +225,6 @@ section{
     color: var(--text-color);
 }
 .service-container{
-    /* display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px ,1fr)); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -241,6 +236,7 @@ section{
     align-items: center;
     background-color: var(--main-color);
     height: 500px;
+    width: 350px;
     border-radius: 3rem;
     cursor: pointer;
     border: 5px solid transparent;
@@ -277,8 +273,6 @@ section{
     background-color: var(--second-bg-color);
 }
 .projects-box{
-    /* display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -289,18 +283,20 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: center;
     background-color: var(--bg-color);
     border: 2px solid var(--main-color);
     border-radius: 3rem;
     gap: 2rem;
-    height: 500px;
+    height: 450px;
+    width: 350px;
     padding: 5rem 2rem;
     overflow: hidden;
     cursor: pointer;
     box-shadow: 0 0 5px var(--main-color);
     transition: 0.3s ease;
+    position:relative;
 }
 .project-card:hover{
     box-shadow: 0 0 25px var(--main-color),
@@ -308,14 +304,19 @@ section{
     transform: scale(1.02);
 }
 .project-card i{
-        font-size: 8rem;
-        color: #ea580c;
+    font-size: 8rem;
+    color: #ea580c;
 }
 .project-card h3{
     font-size: 3rem;
 }
 .project-card p{
     font-size: 1.6rem;
+}
+.project-card a{
+    position:absolute;
+    bottom:4%;
+    font-size: 1rem;
 }
 .contact{
     background-color: var(--bg-color);
@@ -383,8 +384,11 @@ section{
         font-size: 90%;
         overflow-x:hidden;
     }
+    .header{
+        padding: 4rem 6%;
+    }
     .logo {
-        font-size: 5rem;
+        font-size: 3rem;
         color: var(--text-color);
         font-weight: 800;
         cursor: pointer;
@@ -392,6 +396,7 @@ section{
     }
     #menu-icon{
         display: block;
+        font-size: 2.5rem;
     }
     .navbar{
         position: absolute;
@@ -407,8 +412,8 @@ section{
     }
     .navbar a{
         display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
+        font-size: 1.5rem;
+        margin: 1rem ;
         color: var(--text-color);
     }
     .navbar.active{
@@ -418,7 +423,7 @@ section{
         display: none;
     }
     .heading{
-        font-size: 5rem;
+        font-size: 3rem;
     }
     .home{
         flex-direction: column-reverse;
@@ -428,6 +433,16 @@ section{
     .home-content{
         align-items: center;
         text-align: justify;
+    }
+    .home-content h1{
+        font-size: 3rem;
+    }
+    .home-content h3{
+        font-size: 2rem;
+    }
+    .home-content p{
+        font-size: 1.3rem;
+        font-weight: 500;
     }
     .home-img img{
         width: 80vw;
@@ -444,36 +459,58 @@ section{
         width: 80vw;
     }
     .about-content p{
-        font-size: 1.8rem;
+        font-size: 1.3rem;
         text-align: justify;
     }
     .service-container{
         flex-direction: column;
         text-align: center;
     }
+    .service-box{
+        height: 400px;
+        width: 380px;
+        border-radius: 3rem;
+    }
+    .service-info{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+    }
+    .service-info h4{
+        font-size: 2rem;
+        margin: 1rem 0;
+        font-weight: 800;
+    }
+    .service-info p{
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 1.2;
+    }
+    .service-info i{
+        font-size: 6rem;
+    }
     .projects-box{
         flex-direction: column;
         text-align: center;
     }
-    .project-card img{
-        max-width: 200px;
-    }
     .project-card{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        background-color: var(--bg-color);
-        border: 2px solid var(--main-color);
-        border-radius: 3rem;
-        gap: 1rem;
         height: 500px;
-        padding: 5rem 2rem;
-        overflow: hidden;
-        cursor: pointer;
-        box-shadow: 0 0 5px var(--main-color);
-        transition: 0.3s ease;
+        padding: 3rem 2rem;
+    }
+    .project-card i{
+        font-size:5rem;
+    }
+    .project-card h3{
+        font-size: 2rem;
+    }
+    .project-card p {
+        font-size: 1.3rem;
+    }
+    .project-card .btn {
+        font-size: 1.3rem;
     }
     .contact form{
         flex-direction: column;
@@ -484,11 +521,28 @@ section{
     .input-group-2{
         width: 100%;
     }
+    .input-group-2 .btn{
+        font-size: 1rem;
+    }
+    
+    .contact form .input-box input , 
+.contact form textarea{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    border-radius: 1rem;
+    border: 2px solid var(--main-color);
+    margin: 1rem 0;
+    resize: none;
+}
     .footer .list{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        font-size: 20px;
     }
     .footer .list li{
        margin-left: 0;
