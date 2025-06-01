@@ -399,10 +399,9 @@ section {
     flex-grow: 1; /* Allows paragraph to take available space */
 }
 
-.project-card a {
-    position: absolute;
-    bottom: 5%; /* Adjusted position */
-    font-size: 1.5rem; /* Adjusted font size for the button */
+.viewAndTry{
+    width:100% ;
+    justify-content:flex-start;
 }
 
 /* Contact Section */
@@ -692,8 +691,9 @@ section {
         min-height: auto; /* Allow height to adjust */
     }
 
-    .project-card a {
-        position: static; /* Position button normally in flow */
-        margin-top: 2rem;
+    .viewAndTry div {
+        position: static; 
+        margin-top: 1rem;
+       
     }
 }
